@@ -2,6 +2,9 @@ import MovieCard from "../imagenes/MovieCard";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
+//trending movies API call
+
+
 async function getTrendingMovies() {
   const res = await fetch('https://api.themoviedb.org/3/trending/movie/day', {
     method: 'GET',
@@ -23,6 +26,9 @@ export default async function HeroesPage() {
   return (
     <div className="relative w-screen min-h-screen overflow-x-hidden bg-gray-900">
       <Header />
+      <h2 className="text-3xl font-bold text-white text-center mt-24 mb-8">
+        Trending Películas
+      </h2>
       <div className="flex flex-wrap justify-center items-start gap-8 py-12">
         {movies.results.slice(0, 12).map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
