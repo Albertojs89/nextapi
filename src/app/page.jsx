@@ -1,4 +1,5 @@
 import ApiPage from "./api/page";
+import HeroesPage from "./heroes/page";
 import Imagenes from "./imagenes/page";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       
       {/* <ApiPage /> */}
       <Imagenes />
+      {/* <HeroesPage /> */}
     </div>
   );
 }
